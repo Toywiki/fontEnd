@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet"  href="../css/base.css">
+    <link rel="stylesheet"  href="../css/materialize.css">
+    <link href="https://fonts.css.network/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"  href="../css/wiki/create_wiki_content.css">
+</head>
+<body>
+<div class="wiki_div">
+    <div id="wiki_name">
+        李雨芮
+    </div>
+    <div class="intro_div">
+        <p class="div_text">概述</p>
+        <label for="intro"></label>
+        <textarea id="intro" placeholder="词条简介"></textarea>
+    </div>
+    <div class="content_div">
+        <p class="div_text">正文</p>
+        <label for="content"></label>
+        <textarea id="content" placeholder="正文"></textarea>
+    </div>
+    <div class="photo_div">
+        <p class="div_text">上传图片</p>
+        <div id="upload_photo">
+            <i class="material-icons large">add</i>
+        </div>
+    </div>
+    <div class="function_wiki">
+        <a class="waves-effect waves-light btn" id="save_wiki">保存</a>
+        <a class="waves-effect waves-light btn" id="cancel_wiki">取消</a>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/materialize.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/wiki/create_wiki_content.js"></script>
+</body>
+</html>

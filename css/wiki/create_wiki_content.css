@@ -1,0 +1,89 @@
+.wiki_div{
+    height: 1450px;
+    width: 960px;
+    margin: 50px auto;
+    -webkit-box-shadow: 3px 3px 3px 3px #b3b3b3;
+}
+
+#wiki_name{
+    font-size: 30px;
+    width: 940px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px 20px;
+    border-bottom: 1px solid;
+    height:100px;
+}
+
+.div_text{
+    font-size: 30px;
+}
+
+.intro_div{
+    width: 900px;
+    height: 300px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+.intro_div textarea{
+    resize : none;
+    width: 800px;
+    padding: 10px;
+    height: 180px;
+    border-radius: 5px;
+    -webkit-box-shadow:inset 1px 1px 10px #bababa;
+    background-color: #eeeeee;
+    margin-top: 30px;
+}
+
+.content_div{
+    width: 960px;
+    height: 600px;
+    background: url('../../img/div_bg.jpg');
+    margin-top: 20px;
+    padding: 30px;
+}
+
+
+.content_div textarea{
+    resize : none;
+    width: 800px;
+    padding: 10px;
+    height: 400px;
+    border-radius: 5px;
+    -webkit-box-shadow:inset 1px 1px 10px #bababa;
+    background-color: #fff;
+    margin-top: 30px;
+}
+
+.photo_div{
+    height: 300px;
+    padding: 30px;
+}
+
+#upload_photo{
+    width: 180px;
+    height: 180px;
+    padding: 40px;
+    cursor: pointer;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dashed;
+}
+
+.function_wiki{
+    height: 100px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+#cancel_wiki{
+    margin-left: 20px;
+}

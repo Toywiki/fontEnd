@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'KulminoituvaRegular';
+    src: local('Kulminoituva Regular'), local('Kulminoituva'), /*要想引用本地字体，前提*/
+    url('../../fonts/kulminoituva.woff') format('woff');/*现代的浏览器支持*/
+}
+
+#web_name{
+    font-family: KulminoituvaRegular,"Arial Black", Gadget, sans-serif;
+    font-size: 65px;
+    text-align: center;
+}
+/*输入词条名*/
+.enter_wiki_name_div{
+    width: 960px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#wiki_input{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+#enter_wiki_name{
+    width: 400px;
+}
+
+#create_wiki{
+    margin-left: 30px;
+}
+
+/*显示已经存在的词条*/
+.exist_wiki_div{
+    width: 300px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.exist_wiki_item{
+    width: 250px;
+    height: 400px;
+    cursor: pointer;
+}
+
+

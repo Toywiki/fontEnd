@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'KulminoituvaRegular';
+    src: local('Kulminoituva Regular'), local('Kulminoituva'), /*要想引用本地字体，前提*/
+    url('../../fonts/kulminoituva.woff') format('woff');/*现代的浏览器支持*/
+}
+
+#web_name{
+    font-family: KulminoituvaRegular,"Arial Black", Gadget, sans-serif;
+    font-size: 65px;
+    text-align: center;
+}
+
+/*导航栏的样式*/
+.header{
+    height: 30px;
+    min-width: 980px;
+    background-color: #efefef;
+}
+
+.login_register{
+    float: right;
+}
+
+#login{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#register{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/*全局搜索*/
+.nav{
+    min-height: 260px;
+    min-width: 980px;
+}
+
+.global_search_area{
+    width: 500px;
+    height: 60px;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#search_global{
+    width: 50px;
+    height: 50px;
+}
+
+#search_input{
+    display: inline-table;
+    width: 400px;
+    margin-left: 20px;
+}
+
+/*热门词条返回5个*/
+.hot_topic{
+    min-width: 980px;
+    min-height: 350px;
+    background: url('../../img/div_bg.jpg');
+    padding: 40px;
+}
+
+.div_title{
+    text-align: center;
+    font-size: 22px;
+}
+
+.hot_topic_slider img{
+    width: 200px;
+    height: 300px;
+}
+
+/*展示3个大V*/
+.hot_people{
+    min-width: 980px;
+    min-height: 350px;
+    padding: 40px;
+}
+
+.hot_people_show{
+    width: 960px;
+    height: 350px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.person_item{
+    height: 300px;
+    width: 200px;
+    margin-left: 100px;
+    padding: 20px 50px;
+    -webkit-box-shadow: 3px 3px 3px 3px #b3b3b3;
+    float: left;
+}
+
+.person_item img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}
+
+.hot_name{
+    margin-left: 10px;
+    margin-top: 30px;
+    font-size: 17px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 1px 1px #b3b3b3;
+
+}
+
+.create_topic_num{
+    margin-top: 30px;
+    margin-left: 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 1px 1px #b3b3b3;
+}
+
+/*编辑词条主题八个*/
+.create_div{
+    min-width: 980px;
+    min-height: 350px;
+    background: url('../../img/div_bg.jpg');
+    padding: 40px;
+}
+
+.subject_detail{
+    width: 960px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subject_item{
+    width: 200px;
+    height: 100px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 1px 1px #b3b3b3;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.subject_name{
+    margin-left: 60px;
+    margin-top: 30px;
+    font-size: 25px;
+    background-color: #fff;
+}

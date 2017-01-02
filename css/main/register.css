@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'KulminoituvaRegular';
+    src: local('Kulminoituva Regular'), local('Kulminoituva'), /*要想引用本地字体，前提*/
+    url('../../fonts/kulminoituva.woff') format('woff');/*现代的浏览器支持*/
+}
+
+.register_div{
+    width: 500px;
+    height: 400px;
+    margin: 150px auto;
+    -webkit-box-shadow: 3px 3px 3px 3px #b3b3b3;
+}
+
+.register_div .input-field{
+    width: 400px;
+    margin: 20px auto;
+}
+
+#register_word{
+    font-family: KulminoituvaRegular,"Arial Black", Gadget, sans-serif;
+    text-align: center;
+    font-size: 50px;
+}
+
+.register_function{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
