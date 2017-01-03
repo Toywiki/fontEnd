@@ -17,18 +17,18 @@
     background-color: #efefef;
 }
 
-.login_register{
+.login_register , .name_div{
     float: right;
 }
 
-#login{
+#login , #user_name{
     display: inline-block;
     margin-right: 20px;
     font-size: 17px;
     cursor: pointer;
 }
 
-#register{
+#register , #logout{
     display: inline-block;
     margin-right: 20px;
     font-size: 17px;
@@ -60,7 +60,12 @@
     margin-left: 20px;
 }
 
-/*热门词条返回5个*/
+#search_global_content{
+    width: 200px;
+
+}
+
+/*热门词条返回6个*/
 .hot_topic{
     min-width: 980px;
     min-height: 350px;
@@ -75,7 +80,13 @@
 
 .hot_topic_slider img{
     width: 200px;
-    height: 300px;
+    height: 250px;
+}
+
+.hot_topic_slider p{
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 /*展示3个大V*/

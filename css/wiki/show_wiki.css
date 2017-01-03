@@ -1,3 +1,28 @@
+/*导航栏的样式*/
+.header{
+    height: 30px;
+    min-width: 980px;
+    background-color: #efefef;
+}
+
+.login_register , .name_div{
+    float: right;
+}
+
+#login , #user_name{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#register , #home{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
 .wiki_div{
     min-height: 1050px;
     width: 960px;

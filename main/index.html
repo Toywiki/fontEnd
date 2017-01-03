@@ -13,6 +13,7 @@
         <p id="login">登陆</p>
         <p id="register">注册</p>
     </div>
+
 </div>
 <div class="nav">
     <div id="web_name">
@@ -23,18 +24,22 @@
         <div class="input-field" id="search_input">
             <input id="search_global_content" type="text" class="validate">
             <label for="search_global_content">请输入搜索内容</label>
+
+            <span>
+                <input name="group1" type="radio" id="search_name" />
+                <label for="search_name">名字</label>
+            </span>
+            <span style="margin-left: 20px;">
+                <input name="group1" type="radio" id="search_type" />
+                <label for="search_type">类别</label>
+            </span>
+
         </div>
     </div>
 </div>
 <div class="hot_topic">
     <div class="div_title">热门词条</div>
-    <div class=" hot_topic_slider carousel">
-        <a class="carousel-item"><img src="http://lorempixel.com/250/250/nature/1"></a>
-        <a class="carousel-item"><img src="http://lorempixel.com/250/250/nature/2"></a>
-        <a class="carousel-item"><img src="http://lorempixel.com/250/250/nature/3"></a>
-        <a class="carousel-item"><img src="http://lorempixel.com/250/250/nature/4"></a>
-        <a class="carousel-item"><img src="http://lorempixel.com/250/250/nature/5"></a>
-    </div>
+    <div class="hot_topic_slider carousel"></div>
 </div>
 <div class="hot_people">
     <div class="div_title">大V</div>
@@ -81,7 +86,7 @@
             <div class="chip subject_name" id="entertainment">娱乐</div>
         </div>
         <div class="subject_item">
-            <div class="chip subject_name" id="others">其他</div>
+            <div class="chip subject_name" id="education">教育</div>
         </div>
     </div>
 </div>

@@ -12,11 +12,19 @@ $(document).ready(function(){
                 url: base_site+'user/register',
                 type: 'POST',
                 dataType: 'json',
-                data: {"account": account,"pwd":pwd},
+                data: JSON.stringify({"account": account,"pwd":pwd}),
                 success:function(data) {
-                    console.log(data);
+                    if(data.statuscode==-1){
+                        Materialize.toast("用户名被占用",2000);
+                    }
+                    else{
+                        window.location.href=encodeURI("index.html?user_name="+account);
+                    }
                 }
             });
+
+            
         }
     });
+
 });

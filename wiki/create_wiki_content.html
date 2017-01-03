@@ -10,7 +10,7 @@
 <body>
 <div class="wiki_div">
     <div id="wiki_name">
-        李雨芮
+
     </div>
     <div class="intro_div">
         <p class="div_text">概述</p>
@@ -24,9 +24,12 @@
     </div>
     <div class="photo_div">
         <p class="div_text">上传图片</p>
-        <div id="upload_photo">
+        <div id="upload_photo_btn">
             <i class="material-icons large">add</i>
         </div>
+        <form enctype="multipart/form-data">
+            <input type="file" id="upload_photo" style="display: none">
+        </form>
     </div>
     <div class="function_wiki">
         <a class="waves-effect waves-light btn" id="save_wiki">保存</a>
