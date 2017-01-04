@@ -7,6 +7,7 @@ $(document).ready(function(){
     if(user_name!="undefined"){
         $(".header").empty().append('<div class="name_div"><p id="user_name">'+user_name+'</p><p id="home">首页</p></div>');
     }
+
     $.ajax({
         url: base_site+'wiki/viewwiki?id='+wiki_id,
         type: 'GET',
@@ -14,6 +15,7 @@ $(document).ready(function(){
         success:function(data) {
             var title=data.title;
             wiki_name=title;
+            subject_name=data.category;
             var intro=data.introduction;
             var content=data.content;
             var img_path=data.img;
@@ -42,7 +44,10 @@ $(document).ready(function(){
 
                     $("#my_commit_to_wiki").on("click",function(){
                         var comment_content=$("#my_commit").val();
-                        if(comment_content==""){
+                        if(user_name=="undefined"){
+                            Materialize.toast("请先登录!",2000);
+                        }
+                        else if(comment_content==""){
                             Materialize.toast("评论不能为空",2000);
                         }
                         else{
@@ -85,7 +90,11 @@ $(document).ready(function(){
     });
 
     $(temp_id).on("click",function(){
-        window.location.href=encodeURI("create_wiki_content.html?user_name="+user_name+"?subject_name="+subject_name+"?wiki_name="+wiki_name+"?wiki_id="+wiki_id);
+        if(user_name=="undefined"){
+            Materialize.toast("请先登录!",2000);
+        }
+        else
+            window.location.href=encodeURI("create_wiki_content.html?user_name="+user_name+"?subject_name="+subject_name+"?wiki_name="+wiki_name+"?wiki_id="+wiki_id);
     });
 
 });

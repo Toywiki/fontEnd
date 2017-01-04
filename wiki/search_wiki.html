@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet"  href="../css/base.css">
+    <link rel="stylesheet"  href="../css/materialize.css">
+    <link href="https://fonts.css.network/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"  href="../css/wiki/search_wiki.css">
+</head>
+<body>
+<div class="header">
+    <div class="login_register">
+        <p id="login">登陆</p>
+        <p id="register">注册</p>
+        <p id="home">首页</p>
+    </div>
+
+</div>
+<div class="nav">
+    <div id="web_name">
+        TOY WIKI
+    </div>
+    <div class="global_search_area">
+        <img src="../img/search.png" id="search_global" align="AbsMiddle">
+        <div class="input-field" id="search_input">
+            <input id="search_global_content" type="text" class="validate">
+            <label for="search_global_content">请输入搜索内容</label>
+
+            <span>
+                <input name="search_area" type="radio" id="search_name" value="search_name"/>
+                <label for="search_name">名字</label>
+            </span>
+            <span style="margin-left: 20px;">
+                <input name="search_area" type="radio" id="search_type" value="search_type" />
+                <label for="search_type">类别</label>
+            </span>
+
+        </div>
+    </div>
+</div>
+<div class="show_search_result">
+
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../js/materialize.js"></script>
+<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/wiki/search_wiki.js"></script>
+</body>
+</html>

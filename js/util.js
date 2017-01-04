@@ -13,5 +13,11 @@ function getWikiID(){
 function getStatus(){
     return location.search.split("status=")[1]
 }
+function getSearchTitle(){
+    return location.search.split("search_title=")[1]
+}
+function getSearchType(){
+    return location.search.split("search_type=")[1]
+}
 base_site = "http://119.29.161.184:8000/";
 cur_media = "http://119.29.161.184:8000";

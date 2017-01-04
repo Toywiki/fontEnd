@@ -35,14 +35,14 @@
 /*显示已经存在的词条*/
 .exist_wiki_div{
     width: 300px;
-    height: 500px;
+    min-height: 300px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .exist_wiki_item{
     width: 250px;
-    height: 400px;
+    min-height: 250px;
     cursor: pointer;
 }
 

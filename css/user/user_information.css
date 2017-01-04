@@ -9,6 +9,25 @@
     font-size: 65px;
 }
 
+/*导航栏的样式*/
+.header{
+    height: 30px;
+    min-width: 980px;
+    background-color: #efefef;
+}
+
+ .name_div{
+    float: right;
+}
+
+
+ #home{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
 .user_information_div{
     width: 960px;
     height: 300px;
@@ -29,7 +48,7 @@
     cursor: pointer;
 }
 
-#user_name{
+#user_show_name{
     font-size: 17px;
 }
 

@@ -3,6 +3,8 @@ $(document).ready(function(){
     var subject_name=decodeURI(getSubjectName()).split("?")[0];
     var wiki_id=decodeURI(getWikiID());
     var wiki_name=decodeURI(getWikiName()).split("?")[0];
+    var upload_photo_status=0;//记录是否上传图片
+    var img_path;
 
     $("#wiki_name").html(wiki_name);
     $("#upload_photo_btn").on("click",function(){
@@ -18,7 +20,7 @@ $(document).ready(function(){
                 var title=data.title;
                 var intro=data.introduction;
                 var content=data.content;
-                var img_path=data.img;
+                img_path=data.img;
                 $("#intro").val(intro);
                 $("#content").val(content);
                 $("#upload_photo_btn").empty().css("background", 'url('+cur_media+img_path+')').css("background-size","100% 100%");
@@ -29,6 +31,7 @@ $(document).ready(function(){
 
     //监听是否有新照片上传
     $("#upload_photo").on("change",function(){
+        upload_photo_status=1;
         var reader = new FileReader();
         reader.onload = function (evt) {
             $("#upload_photo_btn").empty().css("background", 'url('+evt.target.result+')').css("background-size","100% 100%");
@@ -45,6 +48,9 @@ $(document).ready(function(){
         }
         else if(wiki_id=="undefined"){
             var status=1;
+            if(upload_photo_status==0){
+                $("#upload_photo_btn").empty().css("background", 'url(../../img/div_bg.jpg)').css("background-size","100% 100%");
+            }
             var formData = new FormData();
             formData.append('file', $("#upload_photo")[0].files[0]);
             //上传照片
@@ -58,7 +64,6 @@ $(document).ready(function(){
                 contentType: false
             }).done(function (res) {
                 if(res.statuscode==0){
-                    console.log(res);
                     var wiki_msg={"account": user_name, "title": wiki_name, "introduction": intro, "content": content,
                         "category": subject_name, "img": res.url};
                     $.ajax({
@@ -77,34 +82,52 @@ $(document).ready(function(){
 
         }
         else{
-            var newformData = new FormData();
-            newformData.append('file', $("#upload_photo")[0].files[0]);
-            //上传照片
-            $.ajax({
-                url: base_site + "uploadimage/",
-                type: "POST",
-                cache: false,
-                dataType: 'json',
-                data: newformData,
-                processData: false,
-                contentType: false
-            }).done(function (res) {
-                if(res.statuscode==0){
-                    var wiki_msg={"account": user_name, "wiki_id": wiki_id, "introduction": intro, "content": content,
-                        "category": subject_name, "img": res.url};
-                    $.ajax({
-                        url: base_site+'wiki/editwiki',
-                        type: 'POST',
-                        dataType: 'json',
-                        data:JSON.stringify(wiki_msg),
-                        success:function(data) {
-                            if(data.statuscode==0){
-                                window.location.href=encodeURI("show_wiki.html?user_name="+user_name+"?subject_name="+subject_name+"?wiki_name="+wiki_name+"?wiki_id="+wiki_id);
+            if(upload_photo_status==1){
+                var newformData = new FormData();
+                newformData.append('file', $("#upload_photo")[0].files[0]);
+                //上传照片
+                $.ajax({
+                    url: base_site + "uploadimage/",
+                    type: "POST",
+                    cache: false,
+                    dataType: 'json',
+                    data: newformData,
+                    processData: false,
+                    contentType: false
+                }).done(function (res) {
+                    if(res.statuscode==0){
+                        var wiki_msg={"account": user_name, "wiki_id": wiki_id, "introduction": intro, "content": content,
+                            "category": subject_name, "img": res.url};
+                        $.ajax({
+                            url: base_site+'wiki/editwiki',
+                            type: 'POST',
+                            dataType: 'json',
+                            data:JSON.stringify(wiki_msg),
+                            success:function(data) {
+                                if(data.statuscode==0){
+                                    window.location.href=encodeURI("show_wiki.html?user_name="+user_name+"?subject_name="+subject_name+"?wiki_name="+wiki_name+"?wiki_id="+wiki_id);
+                                }
                             }
+                        });
+                    }
+                });
+            }
+            else{
+                var wiki_msg={"account": user_name, "wiki_id": wiki_id, "introduction": intro, "content": content,
+                    "category": subject_name, "img": img_path};
+                $.ajax({
+                    url: base_site+'wiki/editwiki',
+                    type: 'POST',
+                    dataType: 'json',
+                    data:JSON.stringify(wiki_msg),
+                    success:function(data) {
+                        if(data.statuscode==0){
+                            window.location.href=encodeURI("show_wiki.html?user_name="+user_name+"?subject_name="+subject_name+"?wiki_name="+wiki_name+"?wiki_id="+wiki_id);
                         }
-                    });
-                }
-            });
+                    }
+                });
+            }
+
         }
     });
 

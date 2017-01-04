@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'KulminoituvaRegular';
+    src: local('Kulminoituva Regular'), local('Kulminoituva'), /*要想引用本地字体，前提*/
+    url('../../fonts/kulminoituva.woff') format('woff');/*现代的浏览器支持*/
+}
+
+#web_name{
+    font-family: KulminoituvaRegular,"Arial Black", Gadget, sans-serif;
+    font-size: 65px;
+    text-align: center;
+}
+
+/*导航栏的样式*/
+.header{
+    height: 30px;
+    min-width: 980px;
+    background-color: #efefef;
+}
+
+.login_register , .name_div{
+    float: right;
+}
+
+#login , #user_name{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#register , #logout{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#home{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/*全局搜索*/
+.nav{
+    min-height: 260px;
+    min-width: 980px;
+}
+
+.global_search_area{
+    width: 500px;
+    height: 60px;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#search_global{
+    width: 50px;
+    height: 50px;
+}
+
+#search_input{
+    display: inline-table;
+    width: 400px;
+    margin-left: 20px;
+}
+
+#search_global_content{
+    width: 200px;
+
+}
+.show_search_result{
+    width: 960px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 250px;
+    text-align: center;
+}
+
+.exist_wiki_item .card-image img{
+    width: 250px;
+    height: 200px;
+}
+
+.exist_wiki_item .card-image .card-title{
+    color: #d2d2d2;
+}
+
+.exist_wiki_item{
+    display: inline-block;
+    margin-left: 20px;
+    width: 250px;
+    height: 400px;
+    cursor: pointer;
+}
