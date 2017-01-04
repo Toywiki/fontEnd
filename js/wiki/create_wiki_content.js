@@ -11,6 +11,10 @@ $(document).ready(function(){
         $("#upload_photo").click();
     });
 
+    $("#home").on("click",function(){
+        window.location.href=encodeURI("../main/index.html?user_name="+user_name);
+    });
+
     if(wiki_id!="undefined"){//当前处于编辑词条的状态
         $.ajax({
             url: base_site+'wiki/viewwiki?id='+wiki_id,
@@ -25,6 +29,9 @@ $(document).ready(function(){
                 $("#content").val(content);
                 $("#upload_photo_btn").empty().css("background", 'url('+cur_media+img_path+')').css("background-size","100% 100%");
             }
+        });
+        $("#user_name").on('click',function(){
+            window.location.href=encodeURI("../user/user_information.html?user_name="+user_name);
         });
 
     }
@@ -135,4 +142,6 @@ $(document).ready(function(){
     $("#cancel_wiki").on("click",function(){
         window.location.href=encodeURI("index.html?user_name="+user_name);
     });
+
+
 });

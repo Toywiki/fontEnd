@@ -3,6 +3,13 @@ $(document).ready(function(){
     var search_title=decodeURI(getSearchTitle());
     var search_type=decodeURI(getSearchType()).split("?")[0];
     judge_search();
+    if(user_name!="undefined"){
+        $(".header").empty().append('<div class="name_div"><p id="user_name">'+user_name+'</p><p id="home">首页</p></div>');
+        $("#user_name").on('click',function(){
+            window.location.href=encodeURI("../user/user_information.html?user_name="+user_name);
+        });
+    }
+
     //搜索词条
     $("#search_global").on("click",function(){
         $(".show_search_result").empty();

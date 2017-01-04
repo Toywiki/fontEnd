@@ -6,6 +6,9 @@ $(document).ready(function(){
     var status=decodeURI(getStatus()).split("?")[0];
     if(user_name!="undefined"){
         $(".header").empty().append('<div class="name_div"><p id="user_name">'+user_name+'</p><p id="home">首页</p></div>');
+        $("#user_name").on('click',function(){
+            window.location.href=encodeURI("../user/user_information.html?user_name="+user_name);
+        });
     }
 
     $.ajax({

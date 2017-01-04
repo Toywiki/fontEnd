@@ -12,6 +12,17 @@ $(document).ready(function(){
     $("#login").on("click",function(){
         window.location.href="login.html";
     });
+    $("#logout").on("click",function(){
+        $(".header").empty().append('<div class="login_register"><p id="login">登陆</p><p id="register">注册</p></div>');
+        $.ajax({
+            url: base_site+'user/logout',
+            type: 'GET',
+            dataType: 'json',
+            success:function(data) {
+                Materialize.toast("用户已注销",2000);
+            }
+        });
+    });
 
     //创建词条
     $(".subject_name").on("click",function(){
@@ -58,12 +69,11 @@ $(document).ready(function(){
         url: base_site+'user/celebrity',
         type: 'GET',
         dataType: 'json',
-        success:function(data) {
-            console.log(data);
-            // for(var i=0;i<3;i++){
-            //     $(".hot_topic_slider").append('<a class="carousel-item"><img src="'+cur_media+data.wikis[i].img+'"><p id="'+data.wikis[i].id+'">'+data.wikis[i].title+'</p></a>');
-            // }
-
+        success:function(res) {
+            for(var i=0;i<3;i++){
+                $(".hot_people_show").append('<div class="person_item"><img src="'+cur_media+res.data[i].portrait_url+'">'+
+                    '<div class="chip hot_name">'+res.data[i].account+'</div><div class="chip create_topic_num">创建词条 '+res.data[i].num_of_wiki+'</div></div>');
+            }
         }
     });
 
