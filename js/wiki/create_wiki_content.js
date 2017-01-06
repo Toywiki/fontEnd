@@ -140,7 +140,7 @@ $(document).ready(function(){
 
     //点击取消
     $("#cancel_wiki").on("click",function(){
-        window.location.href=encodeURI("index.html?user_name="+user_name);
+        window.location.href=encodeURI("../main/index.html?user_name="+user_name);
     });
 
 
