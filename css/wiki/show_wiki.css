@@ -55,10 +55,11 @@
 
 .intro_div{
     width: 900px;
-    height: 300px;
+    min-height: 300px;
     margin-top: 20px;
     margin-right: auto;
     margin-left: auto;
+    overflow: hidden;
 }
 
 #wiki_photo{
@@ -77,14 +78,14 @@
 
 .content_div{
     width: 960px;
-    height: 600px;
+    min-height: 600px;
     margin-top: 20px;
     padding: 30px;
 }
 
 #content{
     width: 800px;
-    height: 480px;
+    min-height: 480px;
     padding: 10px;
     font-size: 18px;
 }

@@ -89,10 +89,14 @@
     color: #d2d2d2;
 }
 
+.exist_wiki_item .card-content p{
+    font-size: 20px;
+}
+
 .exist_wiki_item{
     display: inline-block;
     margin-left: 20px;
     width: 250px;
-    height: 400px;
+    height: 250px;
     cursor: pointer;
 }

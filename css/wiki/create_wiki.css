@@ -40,6 +40,10 @@
     margin-right: auto;
 }
 
+.exist_wiki_item .card-image .card-title{
+    color: #d2d2d2;
+}
+
 .exist_wiki_item{
     width: 250px;
     min-height: 250px;

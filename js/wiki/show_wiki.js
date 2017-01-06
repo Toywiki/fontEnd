@@ -100,4 +100,11 @@ $(document).ready(function(){
             window.location.href=encodeURI("create_wiki_content.html?user_name="+user_name+"?subject_name="+subject_name+"?wiki_name="+wiki_name+"?wiki_id="+wiki_id);
     });
 
+    $("#register").on("click",function(){
+        window.location.href="../main/register.html";
+    });
+    $("#login").on("click",function(){
+        window.location.href="../main/login.html";
+    });
+
 });

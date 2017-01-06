@@ -39,9 +39,12 @@ $(document).ready(function(){
                 success:function(data) {
                     if(data.statuscode==1){
                         for(var i=0;i<data.existing.length;i++){
+                            // $(".show_search_result").append('<div class="card exist_wiki_item" id="'+data.existing[i].id+'"><div class="card-image">'+
+                            //     '<img src="'+cur_media+data.existing[i].img+'"><span class="card-title">'+data.existing[i].title+'</span>'+
+                            //     '</div><div class="card-content"><p>'+data.existing[i].introduction+'</p></div></div>');
                             $(".show_search_result").append('<div class="card exist_wiki_item" id="'+data.existing[i].id+'"><div class="card-image">'+
-                                '<img src="'+cur_media+data.existing[i].img+'"><span class="card-title">'+data.existing[i].title+'</span>'+
-                                '</div><div class="card-content"><p>'+data.existing[i].introduction+'</p></div></div>');
+                                '<img src="'+cur_media+data.existing[i].img+'">'+
+                                '</div><div class="card-content"><p>'+data.existing[i].title+'</p></div></div>');
                         }
                         $(".exist_wiki_item").on("click",function(){
                             var wiki_id=$(this).attr('id');
